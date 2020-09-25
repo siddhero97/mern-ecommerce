@@ -10,9 +10,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const path = require('path');
-
+const {readFileSync} = require('fs');
 const keys = require('./config/keys');
-const webpackConfig = require('../webpack.config');
+const webpackConfig = require('./webpack.config');
 const routes = require('./routes');
 
 const { database, port } = keys;
@@ -92,4 +92,3 @@ if (process.env.NODE_ENV !== 'production') {
     // console.log(all_routes(app));
   });
 }
-
