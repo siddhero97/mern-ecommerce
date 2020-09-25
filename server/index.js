@@ -10,6 +10,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const path = require('path');
+const {resolve} = path
 const {readFileSync} = require('fs');
 const keys = require('./config/keys');
 const webpackConfig = require('../webpack.config');
@@ -83,8 +84,8 @@ if (process.env.NODE_ENV !== 'production') {
   const port = process.env.PORT || 5000;
 
   const httpsOptions = {
-    key: readFileSync(resolve(__dirname, '../security/cert.key')),
-    cert: readFileSync(resolve(__dirname, '../security/cert.pem')),
+    key: readFileSync(resolve(__dirname, './security/cert.key')),
+    cert: readFileSync(resolve(__dirname, './security/cert.pem')),
   };
 
   const server = https.createServer(httpsOptions, app).listen(port, () => {
