@@ -12,7 +12,7 @@ const passport = require('passport');
 const path = require('path');
 const {readFileSync} = require('fs');
 const keys = require('./config/keys');
-const webpackConfig = require('./webpack.config');
+const webpackConfig = require('../webpack.config');
 const routes = require('./routes');
 
 const { database, port } = keys;
