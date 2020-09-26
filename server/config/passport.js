@@ -13,6 +13,7 @@ const { serverURL, apiURL } = keys.app;
 
 const User = mongoose.model('User');
 const secret = keys.jwt.secret;
+console.log("secret ", secret);
 
 const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
