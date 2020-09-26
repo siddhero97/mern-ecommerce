@@ -9,6 +9,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CURRENT_WORKING_DIR = process.cwd();
 const NODE_ENV = process.env.NODE_ENV;
 const BASE_API_URL = process.env.BASE_API_URL;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 module.exports = {
   mode: 'production',
