@@ -116,7 +116,7 @@ module.exports = {
       'process.env': {
         NODE_ENV: JSON.stringify(NODE_ENV),
         BASE_API_URL: JSON.stringify(BASE_API_URL),
-        JWT_SECRET = JSON.stringify(JWT_SECRET)
+        JWT_SECRET = 11111111111111111111111111111111111111111111111
       }
     }),
     new HtmlWebpackPlugin({
