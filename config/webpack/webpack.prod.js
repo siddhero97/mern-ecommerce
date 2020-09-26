@@ -8,9 +8,11 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const CURRENT_WORKING_DIR = process.cwd();
 const NODE_ENV = process.env.NODE_ENV;
+console.log("node_env ", NODE_ENV)
 const BASE_API_URL = process.env.BASE_API_URL;
+console.log("base api uri ", BASE_API_URL)
 const JWT_SECRET = process.env.JWT_SECRET;
-
+console.log("jwt secret ", JWT_SECRET)
 module.exports = {
   mode: 'production',
   output: {
