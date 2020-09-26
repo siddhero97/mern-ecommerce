@@ -13,6 +13,7 @@ const BASE_API_URL = process.env.BASE_API_URL;
 console.log("base api uri ", BASE_API_URL)
 const JWT_SECRET = process.env.JWT_SECRET;
 console.log("jwt secret ", JWT_SECRET)
+require('dotenv').config();
 module.exports = {
   mode: 'production',
   output: {
