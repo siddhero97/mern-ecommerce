@@ -15,7 +15,7 @@ console.log("base api uri ", BASE_API_URL)
 const JWT_SECRET = process.env.JWT_SECRET;
 console.log("jwt secret ", JWT_SECRET)
 const PORT = process.env.PORT;
-require('dotenv').config();
+// require('dotenv').config();
 module.exports = {
   mode: 'production',
   output: {
