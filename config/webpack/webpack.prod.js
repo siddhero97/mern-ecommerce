@@ -14,6 +14,7 @@ const BASE_API_URL = process.env.BASE_API_URL;
 console.log("base api uri ", BASE_API_URL)
 const JWT_SECRET = process.env.JWT_SECRET;
 console.log("jwt secret ", JWT_SECRET)
+const PORT = process.env.PORT;
 require('dotenv').config();
 module.exports = {
   mode: 'production',
@@ -118,7 +119,8 @@ module.exports = {
       'process.env': {
         NODE_ENV: JSON.stringify(NODE_ENV),
         BASE_API_URL: JSON.stringify(BASE_API_URL),
-        JWT_SECRET: JSON.stringify(JWT_SECRET)
+        JWT_SECRET: JSON.stringify(JWT_SECRET),
+        PORT: JSON.stringify(PORT)
       }
     }),
     new HtmlWebpackPlugin({
