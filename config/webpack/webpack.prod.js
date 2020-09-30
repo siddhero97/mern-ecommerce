@@ -120,7 +120,7 @@ module.exports = {
         NODE_ENV: JSON.stringify(NODE_ENV),
         BASE_API_URL: JSON.stringify(BASE_API_URL),
         JWT_SECRET: JSON.stringify(JWT_SECRET),
-        PORT: JSON.stringify(PORT)
+        PORT: PORT
       }
     }),
     new HtmlWebpackPlugin({
