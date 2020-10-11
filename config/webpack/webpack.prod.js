@@ -15,6 +15,35 @@ console.log("base api uri ", BASE_API_URL)
 const JWT_SECRET = process.env.JWT_SECRET;
 console.log("jwt secret ", JWT_SECRET)
 const PORT = process.env.PORT;
+const MAILCHIMP_KEY = process.env.MAILCHIMP_KEY;
+const MAILCHIMP = process.env.MAILCHIMP;
+const MAILCHIMP_LIST_KEY = process.env.MAILCHIMP_LIST_KEY;
+const MAILGUN_KEY = process.env.MAILGUN_KEY;
+const MAILGUN_DOMAIN = process.env.MAILGUN_DOMAIN;
+const MAILGUN_EMAIL_SENDER = process.env.MAILGUN_EMAIL_SENDER;
+const BASE_API_URI = process.env.BASE_API_URI;
+const MONGO_URI = process.env.MONGO_URI;
+// #google
+// GOOGLE_CLIENT_ID= 745617023572-k0g51h0e3k3apa6q6e6ioitnrsckgtsp.apps.googleusercontent.com
+// GOOGLE_CLIENT_SECRET= ZQAqILemVNieQS6sSCE0fHYW
+// GOOGLE_CALLBACK_URL=auth/google/callback
+
+// #facebook
+// FACEBOOK_CLIENT_ID= 2663612287222769
+// FACEBOOK_SECRET= 75bc70f56fc24232f8196c451782b4b5
+// FACEBOOK_CALLBACK_URL=auth/facebook/callback
+
+// #jwt
+// JWT_SECRET = 6cf00fdf52e3c20c6b1f253643736912
+
+// #site urls
+// BASE_CLIENT_URL=https://localhost:3000
+// # CLIENT_URL_PROD=https://foodlogin.herokuapp.com/
+// BASE_SERVER_URL=https://localhost:5000
+// # SERVER_URL_PROD=https://foodlogin.herokuapp.com/
+
+// #img folder path
+// IMAGES_FOLDER_PATH=/public/images/
 // require('dotenv').config();
 module.exports = {
   mode: 'production',
@@ -120,6 +149,17 @@ module.exports = {
         NODE_ENV: JSON.stringify(NODE_ENV),
         BASE_API_URL: JSON.stringify(BASE_API_URL),
         JWT_SECRET: JSON.stringify(JWT_SECRET),
+        MAILGUN_KEY: JSON.stringify(MAILCHIMP_KEY),
+        MAILCHIMP: JSON.stringify(MAILCHIMP),
+        MAILCHIMP_KEY: JSON.stringify(MAILCHIMP_KEY),
+        MAILCHIMP_LIST_KEY: JSON.stringify(MAILCHIMP_LIST_KEY),
+        MAILGUN_KEY: JSON.stringify(MAILCHIMP_LIST_KEY),
+        MAILGUN_KEY: JSON.stringify(MAILGUN_KEY),
+        MAILGUN_DOMAIN: JSON.stringify(MAILGUN_DOMAIN),
+        MAILGUN_EMAIL_SENDER: JSON.stringify(MAILGUN_EMAIL_SENDER),
+// const MAILGUN_EMAIL_SENDER = process.env.MAILGUN_EMAIL_SENDER;
+// const MAILGUN_EMAIL_SENDER = process.env.MAILGUN_EMAIL_SENDER;
+// const BASE_API_URI = process.env.BASE_API_URI;
         PORT: PORT
       }
     }),
