@@ -29,9 +29,9 @@ class Shop extends React.PureComponent {
     return (
       <div className='shop'>
         <Switch>
-          <Route exact path='/shop' component={ProductsShop} />
-          <Route path='/shop/category/:slug' component={CategoryShop} />
-          <Route path='/shop/brand/:slug' component={BrandsShop} />
+          <Route exact path='/home/shop' component={ProductsShop} />
+          <Route path='/home/shop/category/:slug' component={CategoryShop} />
+          <Route path='/home/shop/brand/:slug' component={BrandsShop} />
           <Route path='*' component={Page404} />
         </Switch>
       </div>

@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\config",
+    "\\config\\webpack",
+    "\\server"
+  ],
+  "SelectedNode": "\\config\\webpack\\webpack.common.js",
+  "PreviewInSolutionExplorer": false
+}

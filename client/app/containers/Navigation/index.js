@@ -134,7 +134,7 @@ class Navigation extends React.PureComponent {
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}
-                      to='/brands'
+                      to='/home/brands'
                       className={isBrandOpen ? 'brand-link-mouseover' : ''}
                       activeClassName='active'
                       onMouseEnter={handleMouseEnter}
@@ -161,7 +161,7 @@ class Navigation extends React.PureComponent {
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}
-                      to='/shop'
+                      to='/home/shop'
                       activeClassName='active'
                     >
                       Shop
@@ -175,7 +175,7 @@ class Navigation extends React.PureComponent {
                       </DropdownToggle>
                       <DropdownMenu right>
                         <DropdownItem
-                          onClick={() => history.push('/dashboard')}
+                          onClick={() => history.push('/home/dashboard')}
                         >
                           Dashboard
                         </DropdownItem>
@@ -190,10 +190,10 @@ class Navigation extends React.PureComponent {
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right>
-                        <DropdownItem onClick={() => history.push('/login')}>
+                        <DropdownItem onClick={() => history.push('/home/login')}>
                           Login
                         </DropdownItem>
-                        <DropdownItem onClick={() => history.push('/register')}>
+                        <DropdownItem onClick={() => history.push('/home/register')}>
                           Sign Up
                         </DropdownItem>
                       </DropdownMenu>

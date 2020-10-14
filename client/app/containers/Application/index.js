@@ -7,8 +7,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import { Container } from 'reactstrap';
+
 
 import actions from '../../actions';
 
@@ -33,7 +34,8 @@ import AuthSuccess from '../AuthSuccess';
 
 import Footer from '../../components/Footer';
 import Page404 from '../../components/Page404';
-
+// const history = createHistory();
+// history.go(0)
 class Application extends React.PureComponent {
   componentDidMount() {
     const token = localStorage.getItem('token');
@@ -57,37 +59,41 @@ class Application extends React.PureComponent {
   handleMouseDown() {
     document.body.classList.remove('user-is-tabbing');
   }
-
+  
   render() {
-    return (
-      <div className='application'>
-        <Notification />
+    let header;
+    console.log(location);
+  
+  return (
+    
+    <div className='application'>
+        <Notification /> 
         <Navigation />
         <main className='main'>
           <Container>
             <div className='wrapper'>
               <Switch>
-                <Route exact path='/' component={HomePage} />
-                <Route path='/shop' component={Shop} />
-                <Route path='/sell' component={Sell} />
-                <Route path='/contact' component={Contact} />
-                <Route path='/brands' component={BrandsPage} />
-                <Route path='/product/:slug' component={ProductPage} />
-                <Route path='/order/success/:id' component={OrderSuccess} />
-                <Route path='/order/:id' component={OrderPage} />
-                <Route path='/login' component={LoginPage} />
-                <Route path='/register' component={SignupPage} />
-                <Route path='/forgot-password' component={ForgotPassword} />
+                <Route exact path='/home/page' component={HomePage} />
+                <Route path='/home/shop' component={Shop} />
+                <Route path='/home/sell' component={Sell} />
+                <Route path='/home/contact' component={Contact} />
+                <Route path='/home/brands' component={BrandsPage} />
+                <Route path='/home/product/:slug' component={ProductPage} />
+                <Route path='/home/order/success/:id' component={OrderSuccess} />
+                <Route path='/home/order/:id' component={OrderPage} />
+                <Route path='/home/login' component={LoginPage} />
+                <Route path='/home/register' component={SignupPage} />
+                <Route path='/home/forgot-password' component={ForgotPassword} />
                 <Route
-                  path='/reset-password/:token'
+                  path='/home/reset-password/:token'
                   component={ResetPassword}
                 />
-                <Route path='/auth/success' component={AuthSuccess} />
+                <Route path='/home/auth/success' component={AuthSuccess} />
                 <Route
-                  path='/dashboard'
+                  path='/home/dashboard'
                   component={Authentication(Dashboard)}
                 />
-                <Route path='/404' component={Page404} />
+                <Route path='home/404' component={Page404} />
                 <Route path='*' component={Page404} />
               </Switch>
             </div>

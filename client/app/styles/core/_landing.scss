@@ -1,0 +1,41 @@
+.landing{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background-image: url(../../../public/images/landingBG.jpg);
+    background-size: 100vw auto;
+    background-position: center;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 10% 40px ;
+    .intro{
+        width: 25vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        .landingHeader{
+            padding-right: 30px;
+            font-weight: bolder;
+            font-size: 6vmin !important;
+        }
+        .landingText{
+            font-size: 2.3vmin;
+            color: black;
+        }
+        .landingButton{
+            font-family: sans-serif;
+            font-size: 3vmin;
+            background-color: black;
+            display: block;
+            color: white;
+            padding: 1vmin;
+            margin: 1vmin 0;
+            width: 30vmin;
+        }
+        .landingButton.browse{
+            font-size: 2.5vmin; 
+        }
+    }
+
+}

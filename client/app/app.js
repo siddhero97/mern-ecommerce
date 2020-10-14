@@ -7,12 +7,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
+import { Switch, Route} from 'react-router-dom';
 
 import store, { history } from './store';
 import { SET_AUTH } from './containers/Authentication/constants';
 import Application from './containers/Application';
 import ScrollToTop from './scrollToTop';
 import setToken from './utils/token';
+import LandingPage from '../app/containers/LandingPage';
 
 // Import application sass styles
 import './styles/style.scss';
@@ -41,7 +43,10 @@ const app = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <ScrollToTop>
-        <Application />
+        <Switch>
+        <Route exact path='/' component={LandingPage} />
+          <Route path='/home' component={Application} />
+        </Switch>
       </ScrollToTop>
     </ConnectedRouter>
   </Provider>

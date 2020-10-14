@@ -28,10 +28,10 @@ class Login extends React.PureComponent {
       isSubmitting
     } = this.props;
 
-    if (authenticated) return <Redirect to='/dashboard' />;
+    if (authenticated) return <Redirect to='home/dashboard' />;
 
     const registerLink = () => {
-      this.props.history.push('/register');
+      this.props.history.push('/home/register');
     };
 
     const handleSubmit = event => {
