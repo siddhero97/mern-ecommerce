@@ -28,6 +28,7 @@ app.use(passport.initialize());
 
 // Connect to MongoDB
 mongoose.set('useCreateIndex', true);
+console.log("database.url ", database.url);
 mongoose
   .connect(database.url, {
     useNewUrlParser: true,

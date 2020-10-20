@@ -31,7 +31,7 @@ import Contact from '../Contact';
 import OrderSuccess from '../OrderSuccess';
 import OrderPage from '../OrderPage';
 import AuthSuccess from '../AuthSuccess';
-
+import Merchant from "../Merchant";
 import Footer from '../../components/Footer';
 import Page404 from '../../components/Page404';
 // const history = createHistory();
@@ -84,6 +84,7 @@ class Application extends React.PureComponent {
                 <Route path='/home/login' component={LoginPage} />
                 <Route path='/home/register' component={SignupPage} />
                 <Route path='/home/forgot-password' component={ForgotPassword} />
+                <Route path="/home/merchant" component={Merchant} />
                 <Route
                   path='/home/reset-password/:token'
                   component={ResetPassword}

@@ -56,12 +56,14 @@ router.post('/add', (req, res) => {
 
 // fetch all merchants api
 router.get('/list', auth, role.checkRole(role.ROLES.Admin), (req, res) => {
+  console.log("inside list");
   Merchant.find({}, (err, data) => {
     if (err) {
       return res.status(400).json({
         error: 'Your request could not be processed. Please try again.'
       });
     }
+    console.log("data ", data)
     res.status(200).json({
       merchants: data
     });

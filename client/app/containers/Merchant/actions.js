@@ -66,9 +66,10 @@ export const sellWithUs = () => {
 
 export const fetchMerchants = () => {
   return async (dispatch, getState) => {
+    console.log("merchants ");
     try {
       const response = await axios.get(`/api/merchant/list`);
-
+      console.log("merchants ", response);
       dispatch({
         type: FETCH_MERCHANTS,
         payload: response.data.merchants
