@@ -116,7 +116,7 @@ class Signup extends React.PureComponent {
           />
           <div className='auth-actions'>
             <Button type='submit' text='Sign Up' disabled={isSubmitting} />
-            <Link className='redirect-link' to={'/home/login'}>
+            <Link className='redirect-link' to={'/login'}>
               Back to login
             </Link>
           </div>
