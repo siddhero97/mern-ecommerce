@@ -131,7 +131,7 @@ class Navigation extends React.PureComponent {
               <Navbar color='light' light expand='md'>
                 <CartIcon cartItems={cartItems} onClick={toggleCart} />
                 <Nav navbar>
-                  <NavItem>
+                  {/* <NavItem>
                     <NavLink
                       tag={ActiveLink}
                       to='/home/brands'
@@ -157,7 +157,7 @@ class Navigation extends React.PureComponent {
                         onMouseEnter={handleMouseLeave}
                       />
                     </div>
-                  </NavItem>
+                  </NavItem> */}
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}
