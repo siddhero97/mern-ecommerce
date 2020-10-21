@@ -34,7 +34,10 @@ router.post('/add', (req, res) => {
     name,
     business,
     phoneNumber,
-    brand
+    brand,
+    status,
+    isApproved
+    
   });
 
   merchant.save(async (err, data) => {
@@ -55,7 +58,7 @@ router.post('/add', (req, res) => {
 });
 
 // fetch all merchants api
-router.get('/list', auth, role.checkRole(role.ROLES.Admin), (req, res) => {
+router.get('/list', (req, res) => {
   console.log("inside list");
   Merchant.find({}, (err, data) => {
     if (err) {
