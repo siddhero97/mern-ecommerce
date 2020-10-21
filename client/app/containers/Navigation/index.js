@@ -134,33 +134,6 @@ class Navigation extends React.PureComponent {
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}
-                      to='/home/brands'
-                      className={isBrandOpen ? 'brand-link-mouseover' : ''}
-                      activeClassName='active'
-                      onMouseEnter={handleMouseEnter}
-                    >
-                      Brands
-                    </NavLink>
-                    <div
-                      className={
-                        isBrandOpen ? 'mini-brand-open' : 'hidden-mini-brand'
-                      }
-                    >
-                      <div className='mini-brand'>
-                        <div className='extended-margin'></div>
-                        <div className='mini-brand-container'>
-                          <MiniBrand brands={brands} />
-                        </div>
-                      </div>
-                      <div
-                        className={isBrandOpen ? 'dark-overflow' : ''}
-                        onMouseEnter={handleMouseLeave}
-                      />
-                    </div>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      tag={ActiveLink}
                       to='/home/shop'
                       activeClassName='active'
                     >
