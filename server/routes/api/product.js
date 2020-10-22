@@ -3,7 +3,6 @@ const router = express.Router();
 
 // Bring in Models & Helpers
 const Product = require('../../models/product');
-const Brand = require('../../models/brand');
 const Category = require('../../models/category');
 const auth = require('../../middleware/auth');
 const role = require('../../middleware/role');
@@ -15,7 +14,6 @@ router.post('/add', auth, role.checkRole(role.ROLES.Admin), (req, res) => {
   const quantity = req.body.quantity;
   const price = req.body.price;
   const taxable = req.body.taxable;
-  const brand = req.body.brand;
 
   if (!sku) {
     return res.status(400).json({ error: 'You must enter sku.' });
@@ -52,8 +50,7 @@ router.post('/add', auth, role.checkRole(role.ROLES.Admin), (req, res) => {
       description,
       quantity,
       price,
-      taxable,
-      brand
+      taxable
     });
 
     product.save((err, data) => {

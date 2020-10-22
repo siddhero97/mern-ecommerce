@@ -7,7 +7,7 @@ const Category = require('../../models/category');
 const auth = require('../../middleware/auth');
 const role = require('../../middleware/role');
 
-router.post('/add', auth, role.checkRole(role.ROLES.Admin), (req, res) => {
+router.post('/add',  (req, res) => {
   const name = req.body.name;
   const description = req.body.description;
   const products = req.body.products;

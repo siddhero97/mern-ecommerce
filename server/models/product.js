@@ -38,10 +38,6 @@ const ProductSchema = new Schema({
     type: Boolean,
     default: false
   },
-  brand: {
-    type: Schema.Types.ObjectId,
-    ref: 'Brand'
-  },
   updated: Date,
   created: {
     type: Date,

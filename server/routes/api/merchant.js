@@ -12,7 +12,6 @@ router.post('/add', (req, res) => {
   const business = req.body.business;
   const phoneNumber = req.body.phoneNumber;
   const email = req.body.email;
-  const brand = req.body.brand;
 
   if (!name) {
     return res.status(400).json({ error: 'You must enter your name.' });
@@ -34,7 +33,6 @@ router.post('/add', (req, res) => {
     name,
     business,
     phoneNumber,
-    brand,
     status,
     isApproved
     
