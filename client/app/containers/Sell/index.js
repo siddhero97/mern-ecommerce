@@ -68,19 +68,6 @@ class Sell extends React.PureComponent {
                 }}
               />
             </Col>
-            <Col xs='12' md='6'>
-              <Input
-                type={'text'}
-                error={formErrors['brand']}
-                label={'Brand'}
-                name={'brand'}
-                placeholder={'Your Business Brand'}
-                value={sellFormData.brand}
-                onInputChange={(name, value) => {
-                  sellFormChange(name, value);
-                }}
-              />
-            </Col>
             <Col xs='12' md='12'>
               <Input
                 type={'textarea'}

@@ -4,12 +4,11 @@
  *
  */
 
-import { TOGGLE_MENU, TOGGLE_CART, TOGGLE_BRAND } from './constants';
+import { TOGGLE_MENU, TOGGLE_CART } from './constants';
 
 const initialState = {
   isMenuOpen: false,
-  isCartOpen: false,
-  isBrandOpen: false
+  isCartOpen: false
 };
 
 const navigationReducer = (state = initialState, action) => {
@@ -25,11 +24,6 @@ const navigationReducer = (state = initialState, action) => {
         ...state,
         isCartOpen: !state.isCartOpen,
         isMenuOpen: false
-      };
-    case TOGGLE_BRAND:
-      return {
-        ...state,
-        isBrandOpen: action.payload
       };
     default:
       return state;

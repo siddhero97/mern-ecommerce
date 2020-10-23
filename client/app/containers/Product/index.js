@@ -30,9 +30,6 @@ class Product extends React.PureComponent {
       toggleAddProduct,
       isProductAddOpen,
       deleteProduct,
-      handleBrandSelect,
-      selectedBrands,
-      brands,
       taxableSelect
     } = this.props;
 
@@ -49,9 +46,6 @@ class Product extends React.PureComponent {
               formErrors={formErrors}
               productChange={productChange}
               addProduct={addProduct}
-              handleBrandSelect={handleBrandSelect}
-              selectedBrands={selectedBrands}
-              brands={brands}
               taxableSelect={taxableSelect}
             />
           ) : (
@@ -80,9 +74,7 @@ const mapStateToProps = state => {
     formErrors: state.product.formErrors,
     columns: state.product.columns,
     isProductAddOpen: state.product.isProductAddOpen,
-    taxableSelect: state.product.taxableSelect,
-    selectedBrands: state.brand.selectedBrands,
-    brands: state.brand.brandsSelect
+    taxableSelect: state.product.taxableSelect
   };
 };
 

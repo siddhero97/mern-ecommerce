@@ -28,14 +28,10 @@ import actions from '../../actions';
 import Button from '../../components/Button';
 import CartIcon from '../../components/CartIcon';
 import { BarsIcon } from '../../components/Icon';
-import MiniBrand from '../../components/MiniBrand';
 import Menu from '../NavigationMenu';
 import Cart from '../Cart';
 
 class Navigation extends React.PureComponent {
-  componentDidMount() {
-    this.props.fetchBrands();
-  }
 
   render() {
     const {
@@ -43,23 +39,13 @@ class Navigation extends React.PureComponent {
       authenticated,
       user,
       cartItems,
-      brands,
       signOut,
       isCartOpen,
       isMenuOpen,
-      isBrandOpen,
       toggleCart,
-      toggleMenu,
-      toggleBrand
-    } = this.props;
+      toggleMenu
+        } = this.props;
 
-    const handleMouseEnter = () => {
-      toggleBrand(true);
-    };
-
-    const handleMouseLeave = () => {
-      toggleBrand(false);
-    };
 
     return (
       <header className='header fixed-mobile-header'>
@@ -131,33 +117,6 @@ class Navigation extends React.PureComponent {
               <Navbar color='light' light expand='md'>
                 <CartIcon cartItems={cartItems} onClick={toggleCart} />
                 <Nav navbar>
-                  {/* <NavItem>
-                    <NavLink
-                      tag={ActiveLink}
-                      to='/home/brands'
-                      className={isBrandOpen ? 'brand-link-mouseover' : ''}
-                      activeClassName='active'
-                      onMouseEnter={handleMouseEnter}
-                    >
-                      Brands
-                    </NavLink>
-                    <div
-                      className={
-                        isBrandOpen ? 'mini-brand-open' : 'hidden-mini-brand'
-                      }
-                    >
-                      <div className='mini-brand'>
-                        <div className='extended-margin'></div>
-                        <div className='mini-brand-container'>
-                          <MiniBrand brands={brands} />
-                        </div>
-                      </div>
-                      <div
-                        className={isBrandOpen ? 'dark-overflow' : ''}
-                        onMouseEnter={handleMouseLeave}
-                      />
-                    </div>
-                  </NavItem> */}
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}
@@ -249,9 +208,7 @@ const mapStateToProps = state => {
   return {
     isMenuOpen: state.navigation.isMenuOpen,
     isCartOpen: state.navigation.isCartOpen,
-    isBrandOpen: state.navigation.isBrandOpen,
     cartItems: state.cart.cartItems,
-    brands: state.brand.brands,
     authenticated: state.authentication.authenticated,
     user: state.account.user
   };

@@ -74,11 +74,6 @@ const initialState = {
       dataField: 'price',
       text: 'Product Price',
       sort: true
-    },
-    {
-      dataField: 'brand.name',
-      text: 'Product Brand',
-      sort: true
     }
   ]
 };

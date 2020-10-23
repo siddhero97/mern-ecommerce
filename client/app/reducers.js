@@ -26,7 +26,6 @@ import resetPasswordReducer from './containers/ResetPassword/reducer';
 import usersReducer from './containers/Users/reducer';
 import productReducer from './containers/Product/reducer';
 import categoryReducer from './containers/Category/reducer';
-import brandReducer from './containers/Brand/reducer';
 import navigationMenuReducer from './containers/NavigationMenu/reducer';
 import shopReducer from './containers/Shop/reducer';
 import merchantReducer from './containers/Merchant/reducer';
@@ -53,7 +52,6 @@ const createReducer = history =>
     users: usersReducer,
     product: productReducer,
     category: categoryReducer,
-    brand: brandReducer,
     menu: navigationMenuReducer,
     shop: shopReducer,
     merchant: merchantReducer,

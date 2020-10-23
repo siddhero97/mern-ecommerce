@@ -71,17 +71,6 @@ class ProductPage extends React.PureComponent {
                     <h1 className='item-name'>{product.name}</h1>
                     <p className='sku'>{product.sku}</p>
                     <hr />
-                    {product.brand && (
-                      <p className='by'>
-                        see more from{' '}
-                        <Link
-                          to={`/shop/brand/${product.brand.slug}`}
-                          className='brand-link'
-                        >
-                          {product.brand.name}
-                        </Link>
-                      </p>
-                    )}
                     <p className='item-desc'>{product.description}</p>
                     <p className='price'>${product.price}</p>
                   </div>

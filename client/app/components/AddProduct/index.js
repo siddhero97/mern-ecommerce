@@ -18,9 +18,6 @@ const AddProduct = props => {
     formErrors,
     productChange,
     addProduct,
-    handleBrandSelect,
-    selectedBrands,
-    brands,
     taxableSelect
   } = props;
 
@@ -109,18 +106,6 @@ const AddProduct = props => {
               options={taxableSelect}
               handleSelectChange={value => {
                 productChange('taxable', value.value);
-              }}
-            />
-          </Col>
-          <Col xs='12' md='12'>
-            <SelectOption
-              error={formErrors['brand']}
-              label={'Select Brand'}
-              multi={false}
-              options={brands}
-              value={selectedBrands}
-              handleSelectChange={value => {
-                handleBrandSelect(value);
               }}
             />
           </Col>

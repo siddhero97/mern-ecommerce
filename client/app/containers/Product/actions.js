@@ -22,8 +22,6 @@ import {
   SET_PRODUCTS_LOADING
 } from './constants';
 
-import { RESET_BRAND } from '../Brand/constants';
-
 import handleError from '../../utils/error';
 import { formatSelectOptions } from '../../helpers/select';
 import { allFieldsValidation } from '../../utils/validation';
@@ -60,25 +58,6 @@ export const fetchProducts = (filter, slug) => {
 
     try {
       const response = await axios.get(`/api/product/list`);
-
-      dispatch({
-        type: FETCH_PRODUCTS,
-        payload: response.data.products
-      });
-    } catch (error) {
-      handleError(error, dispatch);
-    } finally {
-      dispatch({ type: SET_PRODUCTS_LOADING, payload: false });
-    }
-  };
-};
-
-export const fetchBrandProducts = slug => {
-  return async (dispatch, getState) => {
-    dispatch({ type: SET_PRODUCTS_LOADING, payload: true });
-
-    try {
-      const response = await axios.get(`/api/product/list/brand/${slug}`);
 
       dispatch({
         type: FETCH_PRODUCTS,
@@ -190,16 +169,13 @@ export const addProduct = () => {
         description: 'required|min:10|max:100',
         quantity: 'required|numeric',
         price: 'required|numeric',
-        taxable: 'required',
-        brand: 'required'
+        taxable: 'required'
       };
 
       const product = getState().product.productFormData;
-      const brand = getState().brand.selectedBrands.value;
 
       const newProduct = {
         ...product,
-        brand: brand
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules);
@@ -223,7 +199,6 @@ export const addProduct = () => {
           payload: response.data.product
         });
         dispatch({ type: RESET_PRODUCT });
-        dispatch({ type: RESET_BRAND });
         dispatch(toggleAddProduct());
       }
     } catch (error) {

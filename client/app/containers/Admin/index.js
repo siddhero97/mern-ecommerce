@@ -19,7 +19,6 @@ import Account from '../Account';
 import Users from '../Users';
 import Category from '../Category';
 import Product from '../Product';
-import Brand from '../Brand';
 import Merchants from '../Merchant';
 import Order from '../Order';
 
@@ -43,7 +42,6 @@ class Admin extends React.PureComponent {
                 <Route exact path='/dashboard' component={Account} />
                 <Route path='/dashboard/products' component={Product} />
                 <Route path='/dashboard/categories' component={Category} />
-                <Route path='/dashboard/brands' component={Brand} />
                 <Route path='/dashboard/users' component={Users} />
                 <Route path='/dashboard/merchants' component={Merchants} />
                 <Route path='/dashboard/orders' component={Order} />
