@@ -7,7 +7,7 @@ const Category = require('../../models/category');
 const auth = require('../../middleware/auth');
 const role = require('../../middleware/role');
 
-router.post('/add', auth, role.checkRole(role.ROLES.Admin), (req, res) => {
+router.post('/add',  (req, res) => {
   const sku = req.body.sku;
   const name = req.body.name;
   const description = req.body.description;
@@ -54,9 +54,10 @@ router.post('/add', auth, role.checkRole(role.ROLES.Admin), (req, res) => {
     });
 
     product.save((err, data) => {
+      console.log("err ", err);
       if (err) {
         return res.status(400).json({
-          error: 'Your request could not be processed. Please try again.'
+          error: err
         });
       }
 
@@ -97,16 +98,17 @@ router.get('/item/:slug', (req, res) => {
 // fetch all products api
 router.get('/list', (req, res) => {
   Product.find({})
-    .populate('brand', 'name')
     .exec((err, data) => {
+      console.log("products ", data)
       if (err) {
         return res.status(400).json({
-          error: 'Your request could not be processed. Please try again.'
+          error: err
         });
       }
       res.status(200).json({
         products: data
       });
+      
     });
 });
 
