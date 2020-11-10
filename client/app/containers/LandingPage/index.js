@@ -7,8 +7,6 @@
 import React from 'react';
 import '../../styles/core/_landing.scss';
 import { Link, NavLink as ActiveLink, withRouter } from 'react-router-dom';
-import HomePage from '../Homepage';
-
 const LandingPage = props => {
     const {
       history,

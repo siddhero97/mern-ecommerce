@@ -6,12 +6,10 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-
 import actions from '../../actions';
-
 import Table from '../../components/Table';
 import SubPage from '../../components/SubPage';
-
+import '../../styles/core/_merchants';
 class Merchant extends React.PureComponent {
   componentDidMount() {
     this.props.fetchMerchants();

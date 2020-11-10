@@ -1,0 +1,29 @@
+.merchant-dashboard{
+    table{
+       th{
+            text-align: center;
+        }
+        td{
+            text-align: center;
+            line-height: 6vw;
+            min-width: fit-content;
+            img{
+                max-height:7vw;
+                min-height: 70px;
+                border-radius: 50%;
+                width: auto;
+                border: 4px outset gray;
+                background-color: rgba(255, 182, 173, 0.329);
+            }
+        }
+        td:first-child{
+            background-color: white;
+            padding: 5px;
+        }
+        
+
+    }
+    .item-body{
+        background-color: yellow;
+    }
+}

@@ -3,7 +3,7 @@
  * Merchant reducer
  *
  */
-
+import React from 'react';
 import {
   FETCH_MERCHANTS,
   SELL_FORM_CHANGE,
@@ -25,6 +25,15 @@ const initialState = {
       hidden: true,
       dataField: '_id',
       text: ''
+    },
+    {
+      dataField: 'picture',
+      text: 'Image',
+      formatter: (cell, obj) => {
+        return (
+          <img src={cell} alt="Logo"/>
+          
+        );    }
     },
     {
       dataField: 'name',
