@@ -1,0 +1,92 @@
+.venderWrapper{
+    z-index: 2 !important;
+    
+    position: absolute;
+    background-image: url(../../../public/images/venderBG.png);
+    display: flex;
+    flex-direction: column;
+    height: fit-content !important;
+    z-index: 2 !important;
+    align-items: center;
+    top: 0;
+    background-size: 100vw auto;
+    background-repeat: repeat;
+    background-position: center;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding:0 ;
+    .path{
+        margin: 100px 0 70px 30vw;
+        padding-left: 50px;
+        align-self: flex-start;
+        h1{
+            font-size: 4vw !important;
+            margin-bottom: 30px;
+            padding-left: 20px;
+        }
+        h2{
+            font-size:3vw !important;
+        }
+        p{
+            font-size: 1vw;
+        }
+        .paths{
+            display: flex;
+            flex-direction: row;
+            div{
+                padding:20px 50px 20px 20px;
+                width: 25vw;
+                cursor: pointer;
+                transition: background-color .5s ease;
+                
+                &:hover{
+                    box-shadow: 0 0 10px 2px rgba(255, 30, 0, 0.041);
+                    background-color: rgba(255, 30, 0, 0.041);
+                }
+
+            }
+        }
+    }
+}
+.vender{
+    display: flex;
+    flex-direction: row-reverse;
+    .intro{
+        width: 50vw;
+        padding: 17% 0 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        .venderHeader{
+            padding-right: 30px;
+            padding-bottom: 50px;
+            font-weight: bolder;
+            font-size: 7vmin !important;
+        }
+        .venderText{
+            font-size: 2.3vmin;
+            color: black;
+            h2{
+                font-weight: bold;
+                padding: 40px 5% 0;
+
+            }
+            p{
+                width: 35vw;
+                padding: 0 5%;
+                font-size: 13px;
+            }
+        }
+
+    }
+    .venderImage{
+        width: 50vw;
+        text-align: center;
+        margin-top: 10%;
+        align-self: flex-start;
+    }
+    img{
+        border-radius: 50%;
+    }
+
+}

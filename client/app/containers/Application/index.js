@@ -31,6 +31,7 @@ import OrderSuccess from '../OrderSuccess';
 import OrderPage from '../OrderPage';
 import AuthSuccess from '../AuthSuccess';
 import Merchant from "../Merchant";
+import Vender from '../Vender';
 import Footer from '../../components/Footer';
 import Page404 from '../../components/Page404';
 // const history = createHistory();
@@ -74,6 +75,7 @@ class Application extends React.PureComponent {
               <Switch>
                 <Route exact path='/home/page' component={HomePage} />
                 <Route path='/home/shop' component={Shop} />
+                <Route path='/home/vender' component={Vender} />
                 <Route path='/home/sell' component={Sell} />
                 <Route path='/home/contact' component={Contact} />
                 <Route path='/home/product/:slug' component={ProductPage} />

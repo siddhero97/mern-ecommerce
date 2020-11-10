@@ -13,6 +13,8 @@
 
 /* start product list styles */
 .product-list {
+  border-top: 3px rgba(128, 128, 128, 0.329) solid;
+  padding: 20px 0;
   .product-container {
     background-color: $white;
     box-shadow: $box-shadow;
@@ -63,13 +65,16 @@
         .item-body {
           flex: 1 1 auto;
           height: max-content;
-          
+          h1{
+            color: rgba(255, 38, 0, 0.767) !important;
+            font-weight: bold;
+          }
           
         }
 
         .item-footer {
           .price{
-            font-size: 13px;
+            font-size: 18px;
           }
         }
       }

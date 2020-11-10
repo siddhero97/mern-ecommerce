@@ -32,6 +32,12 @@
             padding: 1vmin;
             margin: 1vmin 0;
             width: 30vmin;
+            a{
+                color: white !important;
+                &:hover{
+                    color: rgba(255, 255, 255, 0.623) !important;
+                }
+            }
         }
         .landingButton.browse{
             font-size: 2.5vmin; 
