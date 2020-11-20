@@ -89,10 +89,10 @@ if (process.env.NODE_ENV !== 'production') {
   //   // console.log(all_routes(app));
   // });
 }
-app.listen(port, () => {
-  console.log(
-    `${chalk.green('✓')} ${chalk.blue(
-      `Listening on port ${port}. Visit http://localhost:${port}/ in your browser.`
-    )}`
-  );
-});
+// app.listen(port, () => {
+//   console.log(
+//     `${chalk.green('✓')} ${chalk.blue(
+//       `Listening on port ${port}. Visit http://localhost:${port}/ in your browser.`
+//     )}`
+//   );
+// });
