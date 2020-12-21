@@ -77,17 +77,17 @@ if (process.env.NODE_ENV !== 'production') {
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../dist/index.html'));
   });
-  const port = process.env.PORT || 5000;
+  // const port = process.env.PORT || 5000;
 
-  const httpsOptions = {
-    key: readFileSync(resolve(__dirname, './security/cert.key')),
-    cert: readFileSync(resolve(__dirname, './security/cert.pem')),
-  };
+  // const httpsOptions = {
+  //   key: readFileSync(resolve(__dirname, './security/cert.key')),
+  //   cert: readFileSync(resolve(__dirname, './security/cert.pem')),
+  // };
 
-  const server = https.createServer(httpsOptions, app).listen(port, () => {
-    console.log('https server running at ' + port);
-    // console.log(all_routes(app));
-  });
+  // const server = https.createServer(httpsOptions, app).listen(port, () => {
+  //   console.log('https server running at ' + port);
+  //   // console.log(all_routes(app));
+  // });
 }
 app.listen(port, () => {
   console.log(

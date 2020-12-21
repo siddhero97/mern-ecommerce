@@ -204,4 +204,7 @@ router.delete(
   }
 );
 
+
+router.get('/list/')
+
 module.exports = router;
